@@ -1,19 +1,29 @@
 package com.mot.gamma.entiry;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Embeddable
+@Entity
+@Table(name = "CONTACT_DETAILS")
 public class ContactDetails {
 
 	@Id
-  //  @GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "ID", nullable = false, updatable = false, insertable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@Column(name = "SUBMITTED_BY")
 	private String submittedBy;
+	@Column(name = "EMAIL_ADDRESS")
 	private String emailAddress;
+	@Column(name = "SUB_DATE")
 	private String subDate;
+	@Column(name = "COMPANY")
 	private String company;
 	
 	public String getSubmittedBy() {
