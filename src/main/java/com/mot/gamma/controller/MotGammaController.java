@@ -26,7 +26,7 @@ public class MotGammaController {
 	@Autowired
 	MotGrammaService motGrammaService;
 
-	@PostMapping("/listCases")
+	@PostMapping("/login")
 	public ResponseEntity<Object> getLogin(@RequestBody Login login) throws Exception {
 		log.info("Controller get login method");
 		ResponseStatus responseStatus = new ResponseStatus();

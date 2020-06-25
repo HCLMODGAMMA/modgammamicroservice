@@ -2,6 +2,10 @@ package com.mot.gamma.entiry;
 
 public class Login {
 	
+	public Login() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	private String userName;
 	private String password;
 	

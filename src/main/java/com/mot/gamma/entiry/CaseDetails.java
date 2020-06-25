@@ -13,6 +13,11 @@ import javax.persistence.Table;
 @Table(name = "CASE_DETAILS")
 public class CaseDetails {
 
+	public CaseDetails() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@Column(name = "CSM_NO", nullable = false, updatable = false, insertable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -53,6 +58,20 @@ public class CaseDetails {
 
 	public Date getSubmittedDate() {
 		return submittedDate;
+	}
+
+	public CaseDetails(int csmNo, String caseSubmissionNo, String caseType, String caseSubType, Date submittedDate,
+			String caseStatus, String subject, String proposalDescription, String reason) {
+		super();
+		this.csmNo = csmNo;
+		this.caseSubmissionNo = caseSubmissionNo;
+		this.caseType = caseType;
+		this.caseSubType = caseSubType;
+		this.submittedDate = submittedDate;
+		this.caseStatus = caseStatus;
+		this.subject = subject;
+		this.proposalDescription = proposalDescription;
+		this.reason = reason;
 	}
 
 	public void setSubmittedDate(Date submittedDate) {

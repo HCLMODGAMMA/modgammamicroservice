@@ -15,22 +15,10 @@ public class MotGammaExceptionHandler extends ResponseEntityExceptionHandler {
 	public ResponseEntity<Object> handleResourceNotFound() {
 		ResponseStatus status = new ResponseStatus();
 		status.setCode(404);
-		status.setMessage("Facility Registration Details not found");
+		status.setMessage("mod gamma Details not found");
 		status.setStatus("Resource not found.");
 		return new ResponseEntity<Object>(status, HttpStatus.NOT_FOUND);
 		
 	}
-	
-/*	 @ResponseBody
-	  @ExceptionHandler(FacilityRegistrationNotFoundException.class)
-	  @ResponseStatus(HttpStatus.NOT_FOUND)
-	 public ResponseEntity<Object> facilityRegistrationDetailsNotFound(FacilityRegistrationNotFoundException ex) {
-		com.emc.fcmas.facilityregistration.util.ResponseStatus status = new com.emc.fcmas.facilityregistration.util.ResponseStatus();
-		status.setCode(404);
-		status.setMessage("Facility Registration Details not found");
-		status.setStatus("Resource not found.");
-		return new ResponseEntity<Object>(status, HttpStatus.NOT_FOUND);
-	  }
-*/
 	
 }

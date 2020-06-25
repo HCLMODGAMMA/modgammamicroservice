@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.mot.gamma.entiry.CaseDetails;
 
 @Repository
-public interface MotGrammaRepository extends JpaRepository<CaseDetails, Integer>{
+public interface CaseDetailsRepository extends JpaRepository<CaseDetails, Integer>{
 
 }
