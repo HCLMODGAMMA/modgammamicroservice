@@ -1,3 +1,4 @@
+package com.mot.gamma.repository;
 /*
  * package com.mot.gamma.repository;
  * 
